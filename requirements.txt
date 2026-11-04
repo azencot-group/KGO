@@ -1,0 +1,22 @@
+# Tested Linux / CUDA 12.8 environment (Python 3.10).
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.10.0+cu128
+lightning==2.5.2
+pytorch-lightning==2.5.2
+torchmetrics==1.7.3
+gluonts==0.15.1
+numpy==1.26.4
+pandas==2.3.3
+einops==0.8.1
+transformers==4.53.0
+jsonargparse[signatures]==4.40.0
+docstring-parser==0.15
+PyYAML==6.0.2
+psutil==6.1.1
+gdown==5.2.0
+ninja==1.11.1.4
+setuptools==78.1.1
+# Preserve the reference GluonTS validation and CLI dependency versions.
+pydantic==1.10.8
+typeshed-client==2.3.0
+fsspec==2024.12.0

@@ -1,0 +1,24 @@
+# Run all short-term forecasting datasets
+
+task_type: stsf
+context_length: 24
+prediction_lengths: [24]
+
+# Seeds to run each (dataset, horizon) combination with. Defaults to [0] if omitted.
+seeds: [0]
+
+datasets:
+  - etth1
+  - etth2
+  - ettm1
+  - ettm2
+  - name: electricity
+    data_name: electricity_nips
+  - name: traffic
+    data_name: traffic_nips
+  - name: exchange
+    data_name: exchange_rate_nips
+    context_length: 30
+    prediction_lengths: [30]
+  - name: solar
+    data_name: solar_nips

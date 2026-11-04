@@ -1,0 +1,29 @@
+# Run all long-term forecasting datasets
+
+context_length: 96
+prediction_lengths: [96,192, 336, 720]
+
+seeds: [0]
+
+datasets:
+  - name: etth1
+    horizon_settings:
+      720: {batch_size: 64}
+  - etth2
+  - ettm1
+  - ettm2
+  - weather_ltsf
+  - name: electricity_ltsf
+    horizon_settings:
+      96: {test_batch_size: 32}
+      192: {test_batch_size: 32}
+      336: {test_batch_size: 16}
+      720: {batch_size: 16, test_batch_size: 8}
+  - exchange_ltsf
+  - name: traffic_ltsf
+    horizon_settings:
+      336: {batch_size: 16, test_batch_size: 16}
+      720: {batch_size: 8, test_batch_size: 8}
+  - name: illness_ltsf
+    context_length: 36
+    prediction_lengths: [24, 36, 48, 60]
